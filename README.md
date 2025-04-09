@@ -9,17 +9,19 @@ It works, but is still WIP - there is some clean up required code wise, which I'
 - using authorities instead of role in the backend
 - some test endpoints etc need to be removed
 - the terminal user interface needs some cleanup / customisability / colour as it forces everything together. There needs to be some way of starting things separately whilst maintaining the look.
+- CSRF
 
 # Tech stack
 - Bun with Vite, Typescript with React. Tailwind.css for styling. Using tanstack router and tanstack query for routing and querying
 - Springboot MVC, using maven
 - Redis for auth session storage + distributed systems support for websockets and sessions (Web sockets stuff not implemented yet)
 - PostgreSQL for database
+- The frontend + backend is intended to be hosted separately. Backend, db and redis should be hosted together.
 
 # Set up
 1. Download pgAdmin4 - this is the UI we will use to access/interact with the postgresDB, should we choose to do so manually. Postgres is a distribution based of SQL, and all the distributions of SQL have their own slight nauances, and as such you'll need specific UIs like pgAdmin4 to configure the DB, access, etc. 
 2. Download docker desktop. Then open it.
-3. Set up a .env file, and put that file into the root. Create values for DATABASE_NAME, DATABASE_USERNAME, DATABASE_PASSWORD
+3. Set up a .env file, and put that file into the root. Create values for DATABASE_NAME, DATABASE_USERNAME, DATABASE_PASSWORD, BACKEND_URL, FRONTEND_URL
 4. run `docker-compose up --build`. This should start up everything.
 5. Connect pgAdmin4 to your postgres db. Create a database as whatever you set DATABASE_NAME to.
 6. Copy and paste setup.sql and execute it. This file sets the default admin username and password to be admin and admin respectively.
