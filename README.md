@@ -8,6 +8,7 @@ It works, but is still WIP - there is some clean up required code wise, which I'
 - improve the code quality/naming of front-end routing
 - using authorities instead of role in the backend
 - some test endpoints etc need to be removed
+- the terminal user interface needs some cleanup / customisability / colour as it forces everything together. There needs to be some way of starting things separately whilst maintaining the look.
 
 # Tech stack
 - Bun with Vite, Typescript with React. Tailwind.css for styling. Using tanstack router and tanstack query for routing and querying
